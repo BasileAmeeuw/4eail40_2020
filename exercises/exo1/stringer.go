@@ -1,14 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
-// Implement types Rectangle, Circle and Shape
+//Rectangle Implement types Rectangle
 type Rectangle struct {
 	//two attributes
 	Width  int32
 	Length int32
 }
 
+//Circle Implement types Circle
 type Circle struct {
 	//one attribute
 	Radius int32
@@ -23,6 +26,7 @@ func (c Circle) String() string {
 	return fmt.Sprint("Circle of radius ", c.Radius)
 }
 
+//Shape Implementation
 type Shape interface { // we create an interface that could be used in Rectangle and Circle i.e.
 	fmt.Stringer
 }
